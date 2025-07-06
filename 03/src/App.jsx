@@ -14,6 +14,7 @@ const App = () => {
   return (
     <div>
       <h1>User Info</h1>
+      <hr />
       <ol>{renderuser}</ol>
     </div>
   );
