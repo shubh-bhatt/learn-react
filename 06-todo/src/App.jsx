@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { nanoid } from "nanoid";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -9,7 +10,27 @@ const App = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    const newtodo = {
+      id: nanoid(),
+      title: title,
+      isCompleted: false,
+    };
+
+    // const temptodos = [...todos];
+    // temptodos.push(newtodo);
+    // setTodos(temptodos);
+
+    // (works same as the below line)
+
+    setTodos([...todos, newtodo]);
+
+    setTitle("");
   };
+
+  const renderTodos = todos.map((todo) => {
+    return <li key={todo.id}>{todo.title}</li>;
+  });
 
   return (
     <div>
@@ -18,7 +39,6 @@ const App = () => {
         <input
           onChange={(e) => {
             setTitle(e.target.value);
-            console.log(e.target.value);
           }}
           value={title}
           type="text"
@@ -29,6 +49,12 @@ const App = () => {
         <br />
         <button>Create Todo</button>
       </form>
+
+      <hr />
+      <div>
+        <h3>Pending Todos</h3>
+        <ul>{renderTodos}</ul>
+      </div>
     </div>
   );
 };
