@@ -4,6 +4,11 @@ const Read = (props) => {
   const todos = props.todos;
   const setTodos = props.setTodos;
 
+  const deleteHandler = (id) => {
+    const deletedtodo = todos.filter((todo) => todo.id != id);
+    setTodos(deletedtodo);
+  };
+
   const renderTodos = todos.map((todo) => {
     return (
       <li key={todo.id}>
@@ -18,11 +23,6 @@ const Read = (props) => {
       </li>
     );
   });
-
-  const deleteHandler = (id) => {
-    const deletedtodo = todos.filter((todo) => todo.id != id);
-    setTodos(deletedtodo);
-  };
 
   return (
     <Fragment>
