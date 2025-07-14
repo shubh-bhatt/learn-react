@@ -27,7 +27,7 @@ const Create = (props) => {
   };
 
   return (
-    <div>
+    <>
       <h1>Create Tasks</h1>
       <form onSubmit={submitHandler}>
         <input
@@ -43,7 +43,7 @@ const Create = (props) => {
         <br />
         <button>Create Todo</button>
       </form>
-    </div>
+    </>
   );
 };
 
