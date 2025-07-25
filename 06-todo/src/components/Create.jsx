@@ -27,10 +27,13 @@ const Create = (props) => {
   };
 
   return (
-    <>
-      <h1>Create Tasks</h1>
+    <div className="w-[60%] p-10 mx-auto">
+      <h1 className="mb-10 text-5xl font-thin">
+        Set <span className="text-red-400">Remainder</span> for <br /> Tasks
+      </h1>
       <form onSubmit={submitHandler}>
         <input
+          className="border-b w-full outline-0 text-2xl font-thin p-2"
           onChange={(e) => {
             setTitle(e.target.value);
           }}
@@ -41,9 +44,11 @@ const Create = (props) => {
 
         <br />
         <br />
-        <button>Create Todo</button>
+        <button className="px-10 py-2 text-xl border rounded mt-5">
+          Create Todo
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 

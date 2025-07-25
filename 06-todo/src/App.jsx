@@ -8,7 +8,7 @@ const App = () => {
   ]);
 
   return (
-    <div>
+    <div className="text-white flex p-10 w-screen h-screen bg-gray-800">
       <Create todos={todos} setTodos={setTodos} />
       <Read todos={todos} setTodos={setTodos} />
     </div>

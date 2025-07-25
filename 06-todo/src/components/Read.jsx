@@ -1,6 +1,3 @@
-import { Fragment } from "react";
-import "./Read.css";
-
 const Read = (props) => {
   const todos = props.todos;
   const setTodos = props.setTodos;
@@ -12,27 +9,30 @@ const Read = (props) => {
 
   const renderTodos = todos.map((todo) => {
     return (
-      <li key={todo.id}>
-        {todo.title} |{" "}
-        <span
+      <li
+        key={todo.id}
+        className="mb-2 flex justify-between items-center p-3 bg-gray-900 rounded "
+      >
+        <span className="text-xl font-thin">{todo.title}</span>
+        <button
+          className="text-sm font-thin text-red-400"
           onClick={() => {
             deleteHandler(todo.id);
           }}
         >
           Delete
-        </span>
+        </button>
       </li>
     );
   });
 
   return (
-    <Fragment>
-      <hr />
-      <div>
-        <h3 className="read_list_heading">Pending Todos</h3>
-        <ul>{renderTodos}</ul>
-      </div>
-    </Fragment>
+    <div className="w-[40%] p-10">
+      <h3 className="mb-10 text-5xl font-thin">
+        <span className="text-yellow-400">Pending</span>Todos
+      </h3>
+      <ol>{renderTodos}</ol>
+    </div>
   );
 };
 
