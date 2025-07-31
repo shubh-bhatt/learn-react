@@ -27,6 +27,14 @@ const Navbar = () => {
       >
         About
       </NavLink>
+
+      <NavLink
+        className={(e) => e.isActive && "text-red-400"}
+        to="/create-recipe"
+        element={<Home />}
+      >
+        Create Recipe
+      </NavLink>
     </div>
   );
 };
