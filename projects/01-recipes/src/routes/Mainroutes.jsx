@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import About from "src/pages/About";
-import Home from "src/pages/Home";
-import Recipes from "src/pages/Recipes";
+import Home from "../pages/Home";
+import Recipes from "../pages/Recipes";
+import About from "../pages/About";
 
 const Mainroutes = () => {
   return (
