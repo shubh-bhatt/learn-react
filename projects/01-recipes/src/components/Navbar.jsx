@@ -1,37 +1,34 @@
 import { NavLink } from "react-router-dom";
-import Home from "../pages/Home";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center gap-x-10 text-sm">
+    <div className="flex items-center justify-center gap-x-10 text-sm mb-10">
       <NavLink
-        className={(e) => e.isActive && "text-red-400"}
+        className={({ isActive }) => (isActive ? "text-red-400" : "")}
         to="/"
-        element={<Home />}
       >
         Home
       </NavLink>
 
       <NavLink
-        className={(e) => e.isActive && "text-red-400"}
+        className={({ isActive }) => (isActive ? "text-red-400" : "")}
         to="/recipes"
-        element={<Home />}
       >
         Recipes
       </NavLink>
 
       <NavLink
-        className={(e) => e.isActive && "text-red-400"}
+        className={({ isActive }) => (isActive ? "text-red-400" : "")}
         to="/about"
-        element={<Home />}
       >
         About
       </NavLink>
 
       <NavLink
-        className={(e) => e.isActive && "text-red-400"}
+        className={({ isActive }) =>
+          `px-3 py-2 bg-gray-700 rounded ${isActive ? "text-red-400" : ""}`
+        }
         to="/create-recipe"
-        element={<Home />}
       >
         Create Recipe
       </NavLink>
