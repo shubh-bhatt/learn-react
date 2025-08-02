@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { recipecontext } from "../context/Recipecontext";
+import RecipeCard from "../components/RecipeCard";
 
 const Recipes = () => {
   const { recipedata } = useContext(recipecontext);
 
   const renderRecipes = recipedata.map((recipe) => (
-    <div key={recipe.id}>
-      <h1>{recipe.title}</h1>
-    </div>
+    <RecipeCard key={recipe.key} recipe={recipe} />
   ));
 
   return <div>{renderRecipes}</div>;

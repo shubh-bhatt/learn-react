@@ -58,14 +58,14 @@ const Create = () => {
         {...register("category")}
       >
         <option className="text-black">Select Category</option>
-        <option value="indian" className="text-black">
-          Indian
+        <option value="breakfast" className="text-black">
+          Breakfast
         </option>
-        <option value="chinese" className="text-black">
-          Chinese
+        <option value="lunch" className="text-black">
+          Lunch
         </option>
-        <option value="italian" className="text-black">
-          Italian
+        <option value="dinner" className="text-black">
+          Dinner
         </option>
       </select>
 
