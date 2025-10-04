@@ -1,0 +1,62 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.color-box {
+  height: 50px;
+  width: 80%;
+  border: 2px solid red;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: white;
+}
+
+.color-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.color-box div:active {
+  scale: 0.95;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+.violet {
+  background-color: violet;
+  color: white;
+}
+
+.reset {
+  background-color: gray;
+  color: whitesmoke;
+}
