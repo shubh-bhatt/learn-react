@@ -1,0 +1,41 @@
+.box-container {
+  width: 100%;
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-container div {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.box-container form {
+  border: 1px solid red;
+  padding: 10px 20px;
+}
+
+.box-container form input {
+  height: 50px;
+  width: 500px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.box-container form button {
+  height: 50px;
+  width: 100px;
+}
+
+.box-container div input {
+  margin: 0px 5px;
+}
+
+.box-container div label {
+  margin: 0px 0px;
+}
